@@ -2,6 +2,7 @@ import './App.css'
 import Hero from './modules/hero/Hero'
 import Navbar from './modules/navbar/Navbar'
 import Stats from './modules/stats/Stats'
+import Main from './modules/main/Main'
 import Process from './modules/process/Process'
 
 import Workflow from './modules/workflow/Workflow'
@@ -22,7 +23,7 @@ function App() {
       </header>
       <main>
         <Stats/>
-
+        <Main />
         <Process />
         
         <Workflow />
