@@ -4,9 +4,8 @@ import PricingCard from './components/PricingCard';
 const Pricing = ({pricingPromise}) => {
     // console.log(pricingPromise);
 
-    const pricingData = use(pricingPromise);
-    // console.log(pricingData);
-    const pricingPlans = pricingData.pricingPlans;
+    const pricingPlans = use(pricingPromise);
+    // console.log(pricingPlans);
 
 
     return (

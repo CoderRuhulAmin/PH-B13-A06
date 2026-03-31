@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "name": "AI Writing Pro",
+    "description": "Generate high-quality content, blogs, and marketing copy in seconds with advanced AI.",
+    "price": 29,
+    "period": "monthly",
+    "tag": "Best Seller",
+    "tagType": "best-seller",
+    "features": [
+      "Unlimited AI generations",
+      "50+ writing templates",
+      "Grammar checker"
+    ],
+    "icon": "public/products/ai-writing-pro.png"
+  },
+  {
+    "id": 2,
+    "name": "Design Templates Pack",
+    "description": "2000+ premium templates for social media, presentations, and marketing materials.",
+    "price": 49,
+    "period": "one-time",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": [
+      "2000+ templates",
+      "Monthly updates",
+      "Commercial license"
+    ],
+    "icon": "public/products/design-tool.png"
+  },
+  {
+    "id": 3,
+    "name": "Premium Stock Assets",
+    "description": "Access millions of royalty-free photos, videos, and graphics for your projects.",
+    "price": 19,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": [
+      "10M+ assets",
+      "Commercial use",
+      "No attribution"
+    ],
+    "icon": "public/products/camera.png"
+  },
+  {
+    "id": 4,
+    "name": "Automation Toolkit",
+    "description": "Automate repetitive tasks and streamline your workflow with powerful tools.",
+    "price": 79,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": [
+      "50+ automations",
+      "API access",
+      "Custom workflows"
+    ],
+    "icon": "public/products/operation.png"
+  },
+  {
+    "id": 5,
+    "name": "Resume Builder Pro",
+    "description": "Create professional resumes and cover letters that land interviews.",
+    "price": 15,
+    "period": "one-time",
+    "tag": "New",
+    "tagType": "new",
+    "features": [
+      "100+ templates",
+      "ATS optimization",
+      "Export to PDF"
+    ],
+    "icon": "public/products/resume-builder.png"
+  },
+  {
+    "id": 6,
+    "name": "Social Media Content Kit",
+    "description": "Complete toolkit for creating engaging social media content across all platforms.",
+    "price": 39,
+    "period": "monthly",
+    "tag": "Best Seller",
+    "tagType": "best-seller",
+    "features": [
+      "5000+ assets",
+      "Scheduler included",
+      "Analytics dashboard"
+    ],
+    "icon": "public/products/social-media.png"
+  },
+  {
+    "id": 7,
+    "name": "Email Marketing Suite",
+    "description": "Create, automate, and optimize email campaigns with powerful marketing tools.",
+    "price": 25,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": [
+      "Drag & drop builder",
+      "Automation workflows",
+      "Analytics reports"
+    ],
+    "icon": "public/products/email.png"
+  },
+  {
+    "id": 8,
+    "name": "SEO Optimization Tool",
+    "description": "Improve your website ranking with advanced SEO analysis and suggestions.",
+    "price": 35,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": [
+      "Keyword research",
+      "On-page analysis",
+      "Competitor tracking"
+    ],
+    "icon": "public/products/seo.png"
+  },
+  {
+    "id": 9,
+    "name": "Video Editing Pack",
+    "description": "Professional video editing tools and templates for content creators.",
+    "price": 59,
+    "period": "one-time",
+    "tag": "Best Seller",
+    "tagType": "best-seller",
+    "features": [
+      "100+ templates",
+      "4K export",
+      "Drag & drop editor"
+    ],
+    "icon": "public/products/video.png"
+  },
+  {
+    "id": 10,
+    "name": "UI/UX Design Kit",
+    "description": "Modern UI components and design systems for building beautiful interfaces.",
+    "price": 45,
+    "period": "one-time",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": [
+      "500+ components",
+      "Figma files included",
+      "Responsive layouts"
+    ],
+    "icon": "public/products/ui-ux.png"
+  }
+]

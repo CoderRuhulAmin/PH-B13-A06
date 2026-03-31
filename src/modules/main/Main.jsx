@@ -1,7 +1,12 @@
+import { use } from 'react';
 import CartList from './components/CartList';
 import ProductList from './components/ProductList';
 
-const Main = () => {
+const Main = ({productsPromise}) => {
+    // console.log(productsPromise);
+    const productsList = use(productsPromise);
+    // console.log(productsList);
+
     return (
         <section className='main-section w-full py-10'>
             <div className="container mx-auto space-y-5">
@@ -14,7 +19,7 @@ const Main = () => {
                     </div>
                 </div>
                 
-                <ProductList />
+                <ProductList productsList={productsList}/>
                 <CartList />
 
             </div>

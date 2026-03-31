@@ -10,6 +10,10 @@ import Footer from './modules/footer/Footer'
 import { Suspense } from 'react'
 
 
+const fetchProducts = async () => {
+  const res = await fetch("./data/products.json");
+  return res.json();
+}
 const fetchPricing = async () => {
   const res = await fetch("./data/pricing.json");
   return res.json();
@@ -21,6 +25,8 @@ function App() {
 
   const pricingPromise = fetchPricing();
   // console.log(pricingPromise)
+  const productsPromise = fetchProducts();
+  // console.log(productsPromise)
 
   return (
     <>
@@ -29,8 +35,10 @@ function App() {
         <Hero />
       </header>
       <main>
-        <Stats/>
-        <Main />
+        <Stats />
+        <Suspense>
+          <Main productsPromise={productsPromise}/>
+        </Suspense>
         <Process />
         <Suspense>
           <Pricing pricingPromise={pricingPromise} />
@@ -38,7 +46,7 @@ function App() {
         <Workflow />
       </main>
 
-      <Footer/>
+      <Footer />
     </>
   )
 }
