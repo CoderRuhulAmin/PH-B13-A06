@@ -30,10 +30,10 @@ function App() {
 
   return (
     <>
-      <header>
+      <header className='w-full sticky top-0 z-10 bg-base-100 shadow-sm'>
         <Navbar />
-        <Hero />
       </header>
+      <Hero />
       <main>
         <Stats />
         <Suspense>
