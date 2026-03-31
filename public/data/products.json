@@ -12,7 +12,7 @@
       "50+ writing templates",
       "Grammar checker"
     ],
-    "icon": "public/products/ai-writing-pro.png"
+    "icon": "./products/ai-writing-pro.png"
   },
   {
     "id": 2,
@@ -27,7 +27,7 @@
       "Monthly updates",
       "Commercial license"
     ],
-    "icon": "public/products/design-tool.png"
+    "icon": "./products/design-tool.png"
   },
   {
     "id": 3,
@@ -42,7 +42,7 @@
       "Commercial use",
       "No attribution"
     ],
-    "icon": "public/products/camera.png"
+    "icon": "./products/camera.png"
   },
   {
     "id": 4,
@@ -57,7 +57,7 @@
       "API access",
       "Custom workflows"
     ],
-    "icon": "public/products/operation.png"
+    "icon": "./products/operation.png"
   },
   {
     "id": 5,
@@ -72,7 +72,7 @@
       "ATS optimization",
       "Export to PDF"
     ],
-    "icon": "public/products/resume-builder.png"
+    "icon": "./products/resume-builder.png"
   },
   {
     "id": 6,
@@ -87,7 +87,7 @@
       "Scheduler included",
       "Analytics dashboard"
     ],
-    "icon": "public/products/social-media.png"
+    "icon": "./products/social-media.png"
   },
   {
     "id": 7,
@@ -102,7 +102,7 @@
       "Automation workflows",
       "Analytics reports"
     ],
-    "icon": "public/products/email.png"
+    "icon": "./products/email.png"
   },
   {
     "id": 8,
@@ -117,7 +117,7 @@
       "On-page analysis",
       "Competitor tracking"
     ],
-    "icon": "public/products/seo.png"
+    "icon": "./products/seo.png"
   },
   {
     "id": 9,
@@ -132,7 +132,7 @@
       "4K export",
       "Drag & drop editor"
     ],
-    "icon": "public/products/video.png"
+    "icon": "./products/video.png"
   },
   {
     "id": 10,
@@ -147,6 +147,6 @@
       "Figma files included",
       "Responsive layouts"
     ],
-    "icon": "public/products/ui-ux.png"
+    "icon": "./products/ui-ux.png"
   }
 ]
