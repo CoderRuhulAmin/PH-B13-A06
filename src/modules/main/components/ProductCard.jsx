@@ -85,7 +85,7 @@ const ProductCard = ({ product, cartItemsPrice, setCartItemsPrice, cartList, set
                         onClick={handleProductSelection} 
                         disabled={isInCart}
                         className={`btn btn-primary rounded-full btn-block ${isInCart ? "cursor-not-allowed" : ""}`}>
-                            {isInCart === true ? "Already in Cart" : "Buy Now"}
+                            {isInCart === true ? "Already in Cart" : "Buy Now"} 
                     </button>
                 </div>
             </div>
