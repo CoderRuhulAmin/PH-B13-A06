@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FeatureList from './FeatureList';
 
-const ProductCard = ({product}) => {
-    console.log(product);
+const ProductCard = ({product, cartItemsPrice, setCartItemsPrice, cartList, setCartList }) => {
+    // console.log(cartItemsPrice);
+    // console.log(cartItemsPrice);
 
     // const tagColorMap = {
 
@@ -12,12 +13,27 @@ const ProductCard = ({product}) => {
 
     // }
 
+    const [isAddedToCart, setIsAddedToCart] = useState(false);
+
+    const handleProductSelection = () => {
+        if(isAddedToCart === false){
+
+            let totalPrice = cartItemsPrice + product.price;
+            // toast.success()
+            setCartItemsPrice(totalPrice);
+
+            setIsAddedToCart(true)
+            setCartList([...cartList, product])
+        }
+
+    }
+
     return (
         <div className="card bg-base-100 shadow-lg">
             <div className="card-body">
                 <div className='flex justify-between'>
                     <div className='w-15 h-15 border-2 border-gray-100 rounded-full p-3 mt-3'>
-                        <img src={product.icon} alt="AI Writing Pro" />
+                        <img src={product.icon} alt="" />
                     </div>
 
                     <span 
@@ -41,7 +57,7 @@ const ProductCard = ({product}) => {
                     }
                 </ul>
                 <div className="mt-6">
-                    <button className="btn btn-primary rounded-full btn-block">Buy Now</button>
+                    <button onClick={handleProductSelection} className="btn btn-primary rounded-full btn-block">{isAddedToCart === true ? "Added to Cart" : "Buy Now"}</button>
                 </div>
             </div>
         </div>

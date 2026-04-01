@@ -7,7 +7,7 @@ import Process from './modules/process/Process'
 import Pricing from './modules/pricing/Pricing'
 import Workflow from './modules/workflow/Workflow'
 import Footer from './modules/footer/Footer'
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 
 
 const fetchProducts = async () => {
@@ -28,16 +28,26 @@ function App() {
   const productsPromise = fetchProducts();
   // console.log(productsPromise)
 
+  const [cartItemsPrice, setCartItemsPrice] = useState(0);
+  const [cartList, setCartList] = useState([]);
+  // console.log(cartList)
+
   return (
     <>
       <header className='w-full sticky top-0 z-10 bg-base-100 shadow-sm'>
-        <Navbar />
+        <Navbar cartList={cartList} />
       </header>
       <Hero />
       <main>
         <Stats />
         <Suspense>
-          <Main productsPromise={productsPromise}/>
+          <Main 
+            productsPromise={productsPromise} 
+            cartItemsPrice={cartItemsPrice} 
+            setCartItemsPrice={setCartItemsPrice} 
+            cartList={cartList}
+            setCartList={setCartList}
+          />
         </Suspense>
         <Process />
         <Suspense>
