@@ -8,6 +8,7 @@ import Pricing from './modules/pricing/Pricing'
 import Workflow from './modules/workflow/Workflow'
 import Footer from './modules/footer/Footer'
 import { Suspense, useState } from 'react'
+import { ToastContainer } from 'react-toastify'
 
 
 const fetchProducts = async () => {
@@ -57,6 +58,9 @@ function App() {
       </main>
 
       <Footer />
+
+      {/* React Toastify  */}
+      <ToastContainer />
     </>
   )
 }

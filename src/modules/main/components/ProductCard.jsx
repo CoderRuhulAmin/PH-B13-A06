@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import FeatureList from './FeatureList';
+import { toast } from 'react-toastify';
 
 const ProductCard = ({product, cartItemsPrice, setCartItemsPrice, cartList, setCartList }) => {
     // console.log(cartItemsPrice);
@@ -19,7 +20,7 @@ const ProductCard = ({product, cartItemsPrice, setCartItemsPrice, cartList, setC
         if(isAddedToCart === false){
 
             let totalPrice = cartItemsPrice + product.price;
-            // toast.success()
+            toast.success(`Your favourite product (${product.name}) is added to cart.`)
             setCartItemsPrice(totalPrice);
 
             setIsAddedToCart(true)

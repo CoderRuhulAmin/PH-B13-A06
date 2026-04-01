@@ -1,6 +1,7 @@
 import { Trash2 } from 'lucide-react';
 import React from 'react';
 import CartListItem from './CartListItem';
+import { toast } from 'react-toastify';
 
 const CartList = ({ cartList, setCartList }) => {
     
@@ -15,6 +16,8 @@ const CartList = ({ cartList, setCartList }) => {
         setCartList(prev =>
             prev.filter(cartItem => cartItem.id !== item.id)
         );
+
+        toast.error(`Your selected product (${item.name}) is removed from cart.`)
         
     }
 
