@@ -17,7 +17,14 @@ const CartList = ({ cartList, setCartList }) => {
             prev.filter(cartItem => cartItem.id !== item.id)
         );
 
-        toast.error(`Your selected product (${item.name}) is removed from cart.`)
+        toast.error(`Your selected product (${item.name}) is removed from cart!`)
+        
+    }
+    const handleCheckout = () => {
+
+        setCartList([]);
+
+        toast.error(`Your cart list is cleaned!`)
         
     }
 
@@ -32,7 +39,12 @@ const CartList = ({ cartList, setCartList }) => {
     }else{
         return (
             <div>
-                <h3>Your Cart</h3>
+                <div className='flex justify-between items-center mb-4'>
+                    <h3 className='text-xl font-bold'>Your Cart</h3>
+                    <button onClick={handleCheckout} className="btn btn-sm btn-warning text-sm">
+                        Checkout
+                    </button>
+                </div>
                 <ul className="list bg-white rounded-box space-y-4">
                     {
                         cartList.map(item => <CartListItem 

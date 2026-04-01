@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import FeatureList from './FeatureList';
 import { toast } from 'react-toastify';
 
-const ProductCard = ({product, cartItemsPrice, setCartItemsPrice, cartList, setCartList }) => {
+const ProductCard = ({ product, cartItemsPrice, setCartItemsPrice, cartList, setCartList }) => {
     // console.log(cartItemsPrice);
     // console.log(cartItemsPrice);
 
@@ -17,15 +17,33 @@ const ProductCard = ({product, cartItemsPrice, setCartItemsPrice, cartList, setC
     const [isAddedToCart, setIsAddedToCart] = useState(false);
 
     const handleProductSelection = () => {
-        if(isAddedToCart === false){
+        // if (isAddedToCart === false) {
 
-            let totalPrice = cartItemsPrice + product.price;
-            toast.success(`Your favourite product (${product.name}) is added to cart.`)
-            setCartItemsPrice(totalPrice);
+        //     let totalPrice = cartItemsPrice + product.price;
+        //     setCartItemsPrice(totalPrice);
+            
+        //     setIsAddedToCart(true)
+        //     setCartList([...cartList, product])
+        //     toast.success(`Your favourite product (${product.name}) is added to cart.`)
+        // }
 
-            setIsAddedToCart(true)
-            setCartList([...cartList, product])
+        
+        const isExist = cartList.some(
+            (item) => item.name === product.name
+        );
+
+        if (isExist) {
+            toast.error("This product is already in your cart.");
+            return;
         }
+
+        
+        let totalPrice = cartItemsPrice + product.price;
+        setCartItemsPrice(totalPrice);
+        
+        setIsAddedToCart(true);
+        setCartList([...cartList, product]);
+        toast.success(`Your favourite product (${product.name}) is added to cart.`);
 
     }
 
@@ -37,21 +55,21 @@ const ProductCard = ({product, cartItemsPrice, setCartItemsPrice, cartList, setC
                         <img src={product.icon} alt="" />
                     </div>
 
-                    <span 
-                    className={`badge badge-sm rounded-full
+                    <span
+                        className={`badge badge-sm rounded-full
                         ${
                             // tagColorMap([product.tag])
-                            product.tag === "Best Seller" ? "bg-[#FEF3C6] text-[#BB4D00]" : 
-                            product.tag === "Popular" ? "bg-[#E1E7FF] text-[#4F39F6]" : 
-                            product.tag === "New" ? "bg-[#DBFCE7] text-[#0A883E]" : null
-                        } 
+                            product.tag === "Best Seller" ? "bg-[#FEF3C6] text-[#BB4D00]" :
+                                product.tag === "Popular" ? "bg-[#E1E7FF] text-[#4F39F6]" :
+                                    product.tag === "New" ? "bg-[#DBFCE7] text-[#0A883E]" : null
+                            } 
                         text-sm font-medium p-4`
-                    }>{product.tag}</span>
+                        }>{product.tag}</span>
                 </div>
                 <h2 className="text-3xl font-bold">{product.name}</h2>
-            <p className="text-xl">{product.description}</p>
+                <p className="text-xl">{product.description}</p>
                 <span className="text-xl">${product.price}/{product.period}</span>
-                
+
                 <ul className="mt-6 flex flex-col gap-2 text-xs">
                     {
                         product.features.map((feature, index) => <FeatureList key={index} feature={feature} />)
