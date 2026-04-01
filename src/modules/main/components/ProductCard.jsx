@@ -14,7 +14,10 @@ const ProductCard = ({ product, cartItemsPrice, setCartItemsPrice, cartList, set
 
     // }
 
-    const [isAddedToCart, setIsAddedToCart] = useState(false);
+    // const [isAddedToCart, setIsAddedToCart] = useState(false);
+
+    const isInCart = cartList.some(item => item.id === product.id);
+    console.log(isInCart)
 
     const handleProductSelection = () => {
         // if (isAddedToCart === false) {
@@ -34,6 +37,7 @@ const ProductCard = ({ product, cartItemsPrice, setCartItemsPrice, cartList, set
 
         if (isExist) {
             toast.error("This product is already in your cart.");
+            // setIsAddedToCart(true);
             return;
         }
 
@@ -41,7 +45,7 @@ const ProductCard = ({ product, cartItemsPrice, setCartItemsPrice, cartList, set
         let totalPrice = cartItemsPrice + product.price;
         setCartItemsPrice(totalPrice);
         
-        setIsAddedToCart(true);
+        // setIsAddedToCart(true);
         setCartList([...cartList, product]);
         toast.success(`Your favourite product (${product.name}) is added to cart.`);
 
@@ -76,7 +80,13 @@ const ProductCard = ({ product, cartItemsPrice, setCartItemsPrice, cartList, set
                     }
                 </ul>
                 <div className="mt-6">
-                    <button onClick={handleProductSelection} className="btn btn-primary rounded-full btn-block">{isAddedToCart === true ? "Added to Cart" : "Buy Now"}</button>
+                    <button 
+                        type='button' 
+                        onClick={handleProductSelection} 
+                        disabled={isInCart}
+                        className={`btn btn-primary rounded-full btn-block ${isInCart ? "cursor-not-allowed" : ""}`}>
+                            {isInCart === true ? "Already in Cart" : "Buy Now"}
+                    </button>
                 </div>
             </div>
         </div>
