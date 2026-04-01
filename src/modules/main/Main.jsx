@@ -12,7 +12,7 @@ const Main = ({ productsPromise, cartItemsPrice, setCartItemsPrice, cartList, se
     // console.log(selectedType);
 
     return (
-        <section className='main-section w-full py-10'>
+        <section id='products-section' className='main-section w-full py-10'>
             <div className="container mx-auto space-y-5">
                 <h2 className='text-5xl font-extrabold text-center'>Premium Digital Tools</h2>
                 <p className='text-center'>Choose from our curated collection of premium digital products designed to boost your productivity and creativity.</p>

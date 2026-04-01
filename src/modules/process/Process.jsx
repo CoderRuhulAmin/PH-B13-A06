@@ -21,7 +21,7 @@ const steps = [
 
 const Process = () => {
     return (
-        <section className='main-section w-full py-10'>
+        <section id='faq-section' className='main-section w-full py-10'>
             <div className="container mx-auto space-y-5">
                 <h2 className='text-5xl font-extrabold text-center'>Get Started in 3 Steps</h2>
                 <p className='text-center'>Start using premium digital tools in minutes, not hours.</p>

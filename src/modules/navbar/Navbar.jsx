@@ -12,26 +12,22 @@ const Navbar = ({cartList}) => {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <a>Parent</a>
-                            <ul className="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
+                        <li><a href='#products-section'>Products</a></li>
+                        <li><a href='#features-section'>Features</a></li>
+                        <li><a href='#pricing-section'>Pricing</a></li>
+                        <li><a href='#testimonials-section'>Testimonials</a></li>
+                        <li><a href='#faq-section'>FAQ</a></li>
                     </ul>
                 </div>
                 <h2 className="text-2xl font-extrabold bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">DigiTools</h2>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Products</a></li>
-                    <li><a>Features</a></li>
-                    <li><a>Pricing</a></li>
-                    <li><a>Testimonials</a></li>
-                    <li><a>FAQ</a></li>
+                    <li><a href='#products-section'>Products</a></li>
+                    <li><a href='#features-section'>Features</a></li>
+                    <li><a href='#pricing-section'>Pricing</a></li>
+                    <li><a href='#testimonials-section'>Testimonials</a></li>
+                    <li><a href='#faq-section'>FAQ</a></li>
                 </ul>
             </div>
             <div className="navbar-end flex gap-1">

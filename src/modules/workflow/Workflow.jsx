@@ -2,7 +2,7 @@ import React from 'react';
 
 const Workflow = () => {
     return (
-        <section className='main-section w-full py-10 bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white'>
+        <section id='features-section' className='main-section w-full py-10 bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white'>
             <div className="container mx-auto space-y-5">
                 <h2 className='text-5xl font-extrabold text-center'>Ready to Transform Your Workflow?</h2>
                 <p className='text-center'>Join thousands of professionals who are already using Digitools to work smarter. Start your free trial today.</p>
