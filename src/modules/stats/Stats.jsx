@@ -2,7 +2,7 @@ import React from 'react';
 
 const Stats = () => {
     return (
-        <section id='testimonials-section' className='stats w-full rounded-none bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white py-10'>
+        <section id='testimonials-section' className='stats w-full rounded-none bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white py-10 mt-20'>
             <div className="container mx-auto text-white flex justify-around items-center">
                 <div className="stat">
                     <div className="stat-value text-6xl font-extrabold text-center mb-2">50K+</div>

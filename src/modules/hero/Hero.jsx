@@ -2,7 +2,7 @@ import { Play } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <div className="hero py-12">
+        <div className="hero py-12 mt-20">
             <div className="container mx-auto flex flex-col-reverse lg:flex-row lg:justify-between items-center gap-10">
                 <div className='flex-1 text-center lg:text-left'>
                     <div className='btn bg-[#E1E7FF] rounded-full px-4 py-2'>

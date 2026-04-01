@@ -9,7 +9,7 @@ const Pricing = ({pricingPromise}) => {
 
 
     return (
-        <section id='pricing-section' className='main-section w-full py-10'>
+        <section id='pricing-section' className='main-section w-full py-10 mt-20'>
             <div className="container mx-auto space-y-5">
                 <h2 className='text-5xl font-extrabold text-center'>Simple, Transparent Pricing</h2>
                 <p className='text-center'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
